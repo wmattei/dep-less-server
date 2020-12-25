@@ -1,4 +1,4 @@
-module.exports = (routes) => (req, res) => {
+module.exports = (routes) => async (req, res) => {
   if (!routes) throw Error('No endpoints defined');
 
   // const
@@ -15,7 +15,7 @@ module.exports = (routes) => (req, res) => {
     res.end();
     return;
   }
-  const data = JSON.stringify(route.handler(req, res));
+  const data = JSON.stringify(await route.handler(req, res));
   if (data) {
     res.write(data);
     res.end();

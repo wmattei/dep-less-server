@@ -1,9 +1,9 @@
+const { listUsers } = require("../../controllers/user");
+
 module.exports = [
   {
     method: 'GET',
     path: '/',
-    handler: (req, res) => {
-      return { users: [] };
-    },
+    handler: listUsers
   },
 ];

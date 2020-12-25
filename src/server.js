@@ -5,7 +5,7 @@ const PORT = process.env.port || 3000;
 //   res.
 // })
 const server = http.createServer(
-  require('./config/router')(require('./routes'))
+  require('./config/api/router')(require('./routes'))
 );
 
 server.listen(PORT);

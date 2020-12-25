@@ -1,4 +1,4 @@
-const router = require('../config/router');
+const router = require('../config/api/router');
 
 module.exports = [
   {
